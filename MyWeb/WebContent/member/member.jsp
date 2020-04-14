@@ -14,30 +14,53 @@
 		<div class="row">
             <div class="box">
                 <div class="col-lg-12">
-                    <hr>
+                   
                     <h2 class="intro-text text-center">
-                        <strong>Profile</strong>
-                    </h2>
-                    <hr>
+                        <strong>Top</strong>
+                	</h2>
+       
                 </div>
                 
                 
                 <div class="col-sm-4 text-center">
-                    <img class="img-responsive" src="../img/member7.jpg" alt="">
-                    <h3>Actor
-                        <small>한지민</small>
-                    </h3>
+                    <a href="top1.jsp?id=top,price,info"><img class="img-responsive" src="../img/top1.jpg" alt="" id="top"></a>
+                    <h4 id="info">반팔 단가리 티셔츠 <br>
+                    	<font style="color: skyblue;" id="price">25,000원</font>
+                    </h4>
                 </div>
                
                 <div class="col-sm-4 text-center">
-                    
+                    <img class="img-responsive" src="../img/top2.jpg" alt="">
+                    <h4>오버핏긴팔 티셔츠 <br>
+                    	<font style="color: skyblue;">30,000원</font>
+                    </h4>
                 </div>
                 <div class="col-sm-4 text-center">
-                  	<img class="img-responsive" src="../img/member8.jpg" alt="">
-                    <h3>Age
-                        <small>37</small>
-                    </h3>
+                  	<img class="img-responsive" src="../img/top3.jpg" alt="">
+                    <h4>나그랑 티셔츠 <br>
+                    	<font style="color: skyblue;">27,900원</font>
+                    </h4>
                 </div>
+                 <div class="col-sm-4 text-center">
+                  	<img class="img-responsive" src="../img/top4.jpg" alt="" width="400px" height="500px">
+                    <h4>피치오버핏 코트 가디언 <br>
+                    	<font style="color: skyblue;">36,800원</font>
+                    </h4>
+                </div>
+                 <div class="col-sm-4 text-center">
+                  	<img class="img-responsive" src="../img/top5.jpg" alt="" width="400px" height="500px">
+                    <h4>롤업 긴팔셔츠 <br>
+                    	<font style="color: skyblue;">19,800원</font>
+                    </h4>
+                </div>
+                 <div class="col-sm-4 text-center">
+                  	<img class="img-responsive" src="../img/top6.jpg" alt="" width="400px" height="500px">
+                    <h4>봄 가을 자켓 <br>
+                    	<font style="color: skyblue;">22,000원</font>
+                    </h4>
+                </div>
+					
+               
                 <div class="clearfix"></div>
                 
             </div>
