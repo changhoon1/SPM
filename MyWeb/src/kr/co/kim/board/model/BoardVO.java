@@ -16,7 +16,7 @@ public class BoardVO {
 
 		SELECT * FROM my_board;*/
 	
-	//DBì— ì €ì¥ëœ ì»¬ëŸ¼ëª…ê³¼ ë™ì¼í•˜ê²Œ ë©¤ë²„ë³€ìˆ˜ ì„ ì–¸.
+	//DB¿¡ ÀúÀåµÈ ÄÃ·³¸í°ú µ¿ÀÏÇÏ°Ô ¸â¹öº¯¼ö ¼±¾ğ.
 	private Long boardId;
 	private String writer;
 	private String title;

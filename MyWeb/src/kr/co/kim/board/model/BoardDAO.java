@@ -14,11 +14,11 @@ import javax.sql.DataSource;
 public class BoardDAO {
 	
 	DataSource ds;
-	//ì‹±ê¸€í†¤ íŒ¨í„´ í´ë˜ìŠ¤ ìƒì„±
-	//1. ìŠ¤ìŠ¤ë¡œì˜ ê°ì²´ë¥¼ ìƒì„±.
+	//½Ì±ÛÅæ ÆĞÅÏ Å¬·¡½º »ı¼º
+	//1. ½º½º·ÎÀÇ °´Ã¼¸¦ »ı¼º.
 	private static BoardDAO boardDAO = new BoardDAO();
 	
-	//2. ìƒì„±ìì— privateì„ ë¶™ì—¬ì„œ ì™¸ë¶€ì—ì„œ ê°ì²´ ìƒì„±ì„ ë§‰ìŒ.
+	//2. »ı¼ºÀÚ¿¡ privateÀ» ºÙ¿©¼­ ¿ÜºÎ¿¡¼­ °´Ã¼ »ı¼ºÀ» ¸·À½.
 	private BoardDAO() {
 		try {
 			Context ct = new InitialContext();
@@ -28,7 +28,7 @@ public class BoardDAO {
 		}
 	}
 	
-	//3. ì™¸ë¶€ì—ì„œ ê°ì²´ ì£¼ì†Œê°’ ìš”êµ¬ì‹œ ê³µê°œëœ ë©”ì„œë“œë¥¼ í†µí•´ DAO ì£¼ì†Œê°’ì„ ë°˜í™˜.
+	//3. ¿ÜºÎ¿¡¼­ °´Ã¼ ÁÖ¼Ò°ª ¿ä±¸½Ã °ø°³µÈ ¸Ş¼­µå¸¦ ÅëÇØ DAO ÁÖ¼Ò°ªÀ» ¹İÈ¯.
 	
 	public static BoardDAO getInstance() {
 		if(boardDAO == null) {
@@ -39,7 +39,7 @@ public class BoardDAO {
 	
 //////////////////////////////////////////////////////////////////////////////	
 	
-	//ëª¨ë“  ê²Œì‹œê¸€ ì •ë³´ë¥¼ ê°€ì§€ê³  ì˜¤ëŠ” ë©”ì„œë“œ.
+	//¸ğµç °Ô½Ã±Û Á¤º¸¸¦ °¡Áö°í ¿À´Â ¸Ş¼­µå.
 	public List<BoardVO> listBoard() {
 		
 		List<BoardVO> articles = new ArrayList<>();
@@ -68,7 +68,7 @@ public class BoardDAO {
 		return articles;
 	}
 	
-	//DBì— ì‘ì„±ê¸€ì„ ë“±ë¡í•˜ëŠ” ë©”ì„œë“œ
+	//DB¿¡ ÀÛ¼º±ÛÀ» µî·ÏÇÏ´Â ¸Ş¼­µå
 	
 	public void regist(String writer, String title, String content) {
 		
@@ -90,7 +90,7 @@ public class BoardDAO {
 		}	
 	}
 	
-	//ê¸€ ìƒì„¸ë³´ê¸° ë©”ì„œë“œ.
+	//±Û »ó¼¼º¸±â ¸Ş¼­µå.
 	public BoardVO contentBoard(String bId){
 		
 		BoardVO vo = null;
@@ -119,7 +119,7 @@ public class BoardDAO {
 		return vo;
 	}
 	
-	//ì¡°íšŒìˆ˜ë¥¼ ì¦ê°€ì‹œí‚¤ëŠ” ë©”ì„œë“œ.
+	//Á¶È¸¼ö¸¦ Áõ°¡½ÃÅ°´Â ¸Ş¼­µå.
 	public void upHit(String bId) {
 		
 		String sql = "UPDATE my_board SET hit = hit + 1 WHERE board_id=?";
@@ -135,7 +135,7 @@ public class BoardDAO {
 	}
 	
 
-	//ê²Œì‹œê¸€ì„ ìˆ˜ì •í•˜ëŠ” ë©”ì„œë“œ.
+	//°Ô½Ã±ÛÀ» ¼öÁ¤ÇÏ´Â ¸Ş¼­µå.
 	public void updateBoard(String bId, String title, String content) {
 		
 		String sql = "UPDATE my_board SET title=?, content=? WHERE board_id=?";
@@ -155,7 +155,7 @@ public class BoardDAO {
 
 	}
 	
-	//ê²Œì‹œê¸€ ì‚­ì œ
+	//°Ô½Ã±Û »èÁ¦
 	public void deleteBoard(String bId) {
 		String sql = "DELETE FROM my_board WHERE board_id=?";
 		
@@ -172,7 +172,7 @@ public class BoardDAO {
 			
 	}
 	
-	//ê²Œì‹œê¸€ ê²€ìƒ‰.
+	//°Ô½Ã±Û °Ë»ö.
 	public List<BoardVO> searchList(String search){
 		
 		List<BoardVO> articles = new ArrayList<>();
