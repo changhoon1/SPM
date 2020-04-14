@@ -14,13 +14,13 @@ public class ContentServiceImpl implements IBoardService {
 
 		String bId = request.getParameter("boardId");
 		
-		//ì¡°íšŒìˆ˜ ì¤‘ë³µ ë°©ì§€ë¥¼ ìœ„í•œ ì¿ í‚¤ë¥¼ í•˜ë‚˜ ìƒì„±.
+		//Á¶È¸¼ö Áßº¹ ¹æÁö¸¦ À§ÇÑ ÄíÅ°¸¦ ÇÏ³ª »ı¼º.
 		Cookie hitCoo = new Cookie("hitNum", bId);
 		hitCoo.setMaxAge(15);
 		response.addCookie(hitCoo);
 		
 		
-		//ì¤‘ë³µ ë°©ì§€ìš© ë¡œì§ ì¿ í‚¤ ì–»ê¸°.
+		//Áßº¹ ¹æÁö¿ë ·ÎÁ÷ ÄíÅ° ¾ò±â.
 		Cookie[] cookies = request.getCookies();
 		String bNum = "";
 		for(Cookie c : cookies) {
@@ -33,7 +33,7 @@ public class ContentServiceImpl implements IBoardService {
 		request.setAttribute("content_board", vo);
 		
 		
-		//ì¡°íšŒìˆ˜ ì˜¬ë ¤ì£¼ëŠ” ë©”ì„œë“œ í˜¸ì¶œ.
+		//Á¶È¸¼ö ¿Ã·ÁÁÖ´Â ¸Ş¼­µå È£Ãâ.
 		if(!bNum.equals(bId)) {
 			BoardDAO.getInstance().upHit(bId);
 
