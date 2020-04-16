@@ -67,7 +67,7 @@
                         <a href="/ShopMall/category.jsp" style="color:blue">CATEGORY</a>
                     </li>
                     <li>
-                        <a href="/ShopMall/board,jsp">BOARD</a> 
+                        <a href="/ShopMall/board.jsp">BOARD</a> 
                     </li>
                     <c:choose>
                     <c:when test="${sessionScope.id == null }">
