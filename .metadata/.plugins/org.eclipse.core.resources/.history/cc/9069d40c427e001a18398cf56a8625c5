@@ -1,0 +1,19 @@
+package board.DAO;
+
+import java.sql.*;
+
+public class BoardDAO {
+	private String url = "jdbc:oracle:thin:@localhost:1521:xe";
+	private String user = "SPM", pwd="1234";
+	private Connection con;
+	private PreparedStatement ps;
+	private ResultSet rs;
+	
+	public BoardDAO() {//생성자로 호출
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+}

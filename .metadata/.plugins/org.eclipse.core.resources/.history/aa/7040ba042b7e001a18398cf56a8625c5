@@ -1,0 +1,66 @@
+package member.DAO;
+
+import java.sql.*;
+
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+
+import member.DTO.DTO;
+
+public class DAO {
+	private String url = "jdbc:oracle:thin:@localhost:1521:xe";
+	private String user = "jsp", pwd="1234";
+	private Connection con;
+	private PreparedStatement ps;
+	private ResultSet rs;
+	
+	public DAO() {//생성자로 호출
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	//회원가입 기능
+	public int insert(DTO dto) {
+		int j=0;
+		String sql = "insert into carelab values(?,?,?,?,?)";
+		try {
+			con = DriverManager.getConnection(url,user,pwd);
+			ps = con.prepareStatement(sql);
+			//System.out.println(dto.getId());
+			//System.out.println(dto.getPw());
+			ps.setString(1, dto.getId());
+			ps.setString(2, dto.getPw());
+			ps.setString(3, dto.getName());
+			ps.setString(4, dto.getEmail());
+			ps.setString(5, dto.getAddress());
+			j=ps.executeUpdate();
+			//아무것도 반환하지 않는다면 0
+			//구문을 실행하였을 시 성공한 구문만큼 숫자가 리턴되어 돌아옴.( return1 )
+			//System.out.println(j);
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				if(rs!=null) {rs.close();}//반대순서로 닫아줘야함.
+				if(ps!=null) {ps.close();}
+				if(con!=null) {con.close();}
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		System.out.println(j);
+		return j;
+	}
+	
+	
+	
+	
+	
+}
