@@ -20,7 +20,7 @@
 	
 	<jsp:include page="include/header.jsp"/>
  
-    <div class="container">
+    <div class="container" >
     
         <div class="row ">
         	
@@ -35,6 +35,7 @@
                             <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                             <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                             <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                           
                             
                         </ol>
 
@@ -49,6 +50,7 @@
                             <div class="item">
                                 <img class="img-responsive img-full" src="img/33.JPG">
                             </div>
+                          
                            
                         </div>
 
@@ -60,26 +62,8 @@
                             <span class="icon-next"></span>
                         </a>
                     </div>
-                        
-                </div>
-                
-                
-                 
-                    
-                <div class="col-lg-6 text-center" >    
-                   
-						<h2>LOL강의</h2>
-						<p>
-							강사를 소개합니다.
-						</p>
-						<hr>
-						<h3>강의 영상</h3>
-						
-<iframe width="500" height="450" src="https://www.youtube.com/embed/jBN8C1Kw4j0" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>					
-                 </div>   
-                    
-                
-            </div>
+                      
+             
             
           
             
