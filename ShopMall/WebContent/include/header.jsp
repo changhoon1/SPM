@@ -61,7 +61,7 @@
                         <a href="/ShopMall/category.jsp">CATEGORY</a>
                     </li>
                     <li>
-                        <a href="/ShopMall/board,jsp">BOARD</a>
+                        <a href="/ShopMall/list.jsp">BOARD</a>
                     </li>
                     <li>
                         <a href="/ShopMall/login.jsp">LOGIN</a>

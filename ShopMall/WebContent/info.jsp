@@ -15,12 +15,13 @@
 <%
     request.setCharacterEncoding("UTF-8");
 %>
-
+<jsp:include page="include/header.jsp"/>
 <div style="width:80%; margin: 0 auto; text-align: center;">
 <img src="${param.img}" style="width: 500px; height: 700px;"><br>
 <h4>${param.name }</h4><br>
 <font style="color: skyblue;">${param.price }</font><p>
 <!--  <input type="submit" value="구매" style="width: 100px; height: 70px;">-->
 </div>
+<jsp:include page="include/footer.jsp"/>
 </body>
 </html>

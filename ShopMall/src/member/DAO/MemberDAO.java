@@ -6,7 +6,7 @@ import member.DTO.MemberDTO;
 
 public class MemberDAO {
 	private String url = "jdbc:oracle:thin:@localhost:1521:xe";
-	private String user = "jsp", pwd="1234";
+	private String user = "java1", pwd="1234";
 	private Connection con;
 	private PreparedStatement ps;
 	private ResultSet rs;
