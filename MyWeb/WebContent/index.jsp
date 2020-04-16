@@ -41,13 +41,13 @@
                      
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img class="img-responsive img-full" src="img/1.jpg">
+                                <img class="img-responsive img-full" src="img/11.JPG">
                             </div>
                             <div class="item">
-                                <img class="img-responsive img-full" src="img/2.jpg"> <!-- img-full 옵션 class -->
+                                <img class="img-responsive img-full" src="img/22.JPG"> <!-- img-full 옵션 class -->
                             </div>
                             <div class="item">
-                                <img class="img-responsive img-full" src="img/3.jpg">
+                                <img class="img-responsive img-full" src="img/33.JPG">
                             </div>
                            
                         </div>
@@ -68,15 +68,14 @@
                     
                 <div class="col-lg-6 text-center" >    
                    
-						<h2>배우</h2>
+						<h2>LOL강의</h2>
 						<p>
-							한지민을 소개합니다.
+							강사를 소개합니다.
 						</p>
 						<hr>
-						<h3>화보 영상</h3>
+						<h3>강의 영상</h3>
 						
-						<iframe width="100%" height="372px" src="https://www.youtube.com/embed/1C6dcnVQjSM?autoplay=1&amp;loop=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>></iframe>
-					
+<iframe width="500" height="450" src="https://www.youtube.com/embed/jBN8C1Kw4j0" frameborder="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>					
                  </div>   
                     
                 
@@ -93,12 +92,12 @@
         
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">Jimin World
-                        <strong>유의 사항!</strong>
+                    <h2 class="intro-text text-center">KG 쇼핑몰
+                        <strong>신제품!</strong>
                     </h2>
                     <hr>
 		                <div class="inner" align="center">
-		                    <img class="img-responsive img-center" src="img/intro.jpg" alt=""><!-- img-border --> 
+		                    <img class="img-responsive img-center" src="/test/img/11.JPG" alt=""><!-- img-border --> 
 		                    
 		                    <hr class="visible-xs">
 		                   
@@ -117,10 +116,9 @@
             </div>
         </div>
 
-          
+       
     <!-- /.container -->
     </div>
-    
     <jsp:include page="include/footer.jsp"/>
 	
 	

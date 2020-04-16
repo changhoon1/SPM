@@ -21,7 +21,7 @@ import kr.co.kim.board.service.RegisterServiceImpl;
 import kr.co.kim.board.service.SearchServiceImpl;
 import kr.co.kim.board.service.UpdateServiceImpl;
 
-@WebServlet("*.board") //í™•ì¥ì íŒ¨í„´.
+@WebServlet("*.board") //È®ÀåÀÚ ÆĞÅÏ.
 public class BoardController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -49,21 +49,21 @@ public class BoardController extends HttpServlet {
 		
 		IBoardService sv = null;
 		
-		//ë¦¬ìŠ¤íŠ¸ ëª©ë¡ ìš”ì²­
+		//¸®½ºÆ® ¸ñ·Ï ¿äÃ»
 		if(com.equals("/board/list.board")) {
 			
 			sv = new GetListServiceImpl();
 			sv.execute(request, response);
 			
-			//requestê°ì²´ë¥¼ ë‹¤ìŒ í™”ë©´ê¹Œì§€ ìš´ë°˜í•˜ê¸° ìœ„í•œ forward ì´ë™ 
+			//request°´Ã¼¸¦ ´ÙÀ½ È­¸é±îÁö ¿î¹İÇÏ±â À§ÇÑ forward ÀÌµ¿ 
 			RequestDispatcher dp = request.getRequestDispatcher("board_list.jsp");
 			dp.forward(request, response);
 			
-		 //ê¸€ì“°ê¸° í™”ë©´ ì´ë™ ìš”ì²­
+		 //±Û¾²±â È­¸é ÀÌµ¿ ¿äÃ»
 		} else if(com.equals("/board/writer.board")) {
 			response.sendRedirect("board_write.jsp");
 		
-			//ì‘ì„±ê¸€ ë“±ë¡ ìš”ì²­
+			//ÀÛ¼º±Û µî·Ï ¿äÃ»
 		} else if(com.equals("/board/regist.board")) {
 			
 			sv = new RegisterServiceImpl();
@@ -71,7 +71,7 @@ public class BoardController extends HttpServlet {
 			
 			response.sendRedirect("list.board");
 			
-		//ìƒì„¸ ê¸€ ë³´ê¸° ìš”ì²­
+		//»ó¼¼ ±Û º¸±â ¿äÃ»
 		} else if(com.equals("/board/content.board")) {
 			
 			sv = new ContentServiceImpl();
@@ -80,27 +80,27 @@ public class BoardController extends HttpServlet {
 			RequestDispatcher dp = request.getRequestDispatcher("board_content.jsp");
 			dp.forward(request, response);
 			
-		 //ê²Œì‹œê¸€ ìˆ˜ì • í˜ì´ì§€ ì´ë™ ìš”ì²­.
+		 //°Ô½Ã±Û ¼öÁ¤ ÆäÀÌÁö ÀÌµ¿ ¿äÃ».
 		} else if(com.equals("/board/modify.board")) {
 			
-			//ModifyServiceImpl() ìƒì„±. 
-			//ê²Œì‹œê¸€ì— í•´ë‹¹í•˜ëŠ” ì •ë³´ë¥¼ ê°€ì ¸ì˜¤ëŠ” ë©”ì„œë“œ ì‹¤í–‰
-			//serviceì—ì„œ requestê°ì²´ì— ì €ì¥
-			//í™”ë©´ì´ë™(dp)í•´ì„œ íƒœê·¸ ì•ˆì— ê°’ì„ ì¶œë ¥.
+			//ModifyServiceImpl() »ı¼º. 
+			//°Ô½Ã±Û¿¡ ÇØ´çÇÏ´Â Á¤º¸¸¦ °¡Á®¿À´Â ¸Ş¼­µå ½ÇÇà
+			//service¿¡¼­ request°´Ã¼¿¡ ÀúÀå
+			//È­¸éÀÌµ¿(dp)ÇØ¼­ ÅÂ±× ¾È¿¡ °ªÀ» Ãâ·Â.
 			sv = new ModifyServiceImpl();
 			sv.execute(request, response);
 			
 			RequestDispatcher dp = request.getRequestDispatcher("board_modify.jsp");
 			dp.forward(request, response);
 		
-		// ìˆ˜ì • ìš”ì²­.		
+		// ¼öÁ¤ ¿äÃ».		
 		} else if(com.equals("/board/update.board")) {
 			
 			/*
-			 * 1. UpdateServiceImpl() ë§Œë“¤ê³  excute() ë©”ì„œë“œ ì‹¤í–‰
-			 * 2. ì„œë¹„ìŠ¤ì—ì„œëŠ” bId, title, contentë¥¼ ë°›ì•„ì„œ daoì˜ updateBoard() ë©”ì„œë“œ ì‹¤í–‰
-			 * 3. updateBoard()ëŠ” updateêµ¬ë¬¸ìœ¼ë¡œ ë°ì´í„° ìˆ˜ì • 
-			 * 4. í˜ì´ì§€ ì´ë™ì„ ëª©ë¡
+			 * 1. UpdateServiceImpl() ¸¸µé°í excute() ¸Ş¼­µå ½ÇÇà
+			 * 2. ¼­ºñ½º¿¡¼­´Â bId, title, content¸¦ ¹Ş¾Æ¼­ daoÀÇ updateBoard() ¸Ş¼­µå ½ÇÇà
+			 * 3. updateBoard()´Â update±¸¹®À¸·Î µ¥ÀÌÅÍ ¼öÁ¤ 
+			 * 4. ÆäÀÌÁö ÀÌµ¿À» ¸ñ·Ï
 			 * 5. sql : UPDATE my_board SET title=?, content=? WHERE board_id =? 
 			 */
 			sv = new UpdateServiceImpl();
@@ -108,7 +108,7 @@ public class BoardController extends HttpServlet {
 			
 			response.sendRedirect("list.board");
 		
-		// ì‚­ì œ ìš”ì²­.	
+		// »èÁ¦ ¿äÃ».	
 		} else if(com.equals("/board/delete.board")) {
 			//sql = DELETE FROM my_board WHERE board_id=?;
 			sv = new DeleteServiceImpl();
@@ -116,7 +116,7 @@ public class BoardController extends HttpServlet {
 			
 			response.sendRedirect("list.board");
 			
-		//ê²€ìƒ‰ ìš”ì²­.
+		//°Ë»ö ¿äÃ».
 		} else if(com.equals("/board/search.board")) {
 			//sql = "SELECT * FROM my_board WHERE title LIKE ?;
 			
