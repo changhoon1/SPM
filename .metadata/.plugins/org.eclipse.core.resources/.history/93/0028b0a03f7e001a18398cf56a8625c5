@@ -1,0 +1,10 @@
+package board.DTO;
+
+import java.sql.Timestamp;
+
+public class BoardDTO {
+	private int id, hit, idgroup, step, ident;
+	private String name, title, content;
+	private Timestamp savedate;
+}
+

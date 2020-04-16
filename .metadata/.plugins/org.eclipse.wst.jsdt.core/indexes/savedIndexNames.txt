@@ -1,0 +1,9 @@
+INDEX VERSION 1.4+C:\java\SPM_workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1902234333.index
+3595350714.index
+336104921.index
+2921315682.index
+4049998712.index
+266376581.index
+3680480610.index
+2092146582.index

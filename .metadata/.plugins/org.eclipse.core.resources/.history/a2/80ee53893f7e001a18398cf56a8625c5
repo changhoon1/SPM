@@ -1,0 +1,8 @@
+package board.DTO;
+
+public class BoardDTO {
+	private int id, hit, idgroup, step, ident;
+	private String name, title, content;
+	private Timestamp savedate;
+}
+
